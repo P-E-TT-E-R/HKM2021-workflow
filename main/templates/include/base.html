@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
 
 	<!-- Specific Page CSS goes HERE  -->
 	{% block stylesheets %}{% endblock stylesheets %}
-	<link rel="stylesheet" href="{{ url_for('static', filename = '/assets/css/main.css') }}">
+	<link rel="stylesheet" href="{% static '/assets/css/main.css' %}">
 		
 
 </head>
@@ -35,10 +36,8 @@
 		{% include 'include/sidebar.html' %}
 
 		<div class="content">
-			<div class="container-fluid">
-				{% block content %}
-				{% endblock content %}
-			</div>
+			{% block content %}
+			{% endblock content %}
 		</div>
 		{% include 'include/footer.html' %}
 
@@ -48,7 +47,6 @@
 
 
     <!-- Specific Page JS goes HERE  -->
-    <script src="{{ url_for('static', filename = '/assets/js/main.js') }}"></script>
     {% block javascripts %}{% endblock javascripts %}
 
 </body>
