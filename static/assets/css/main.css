@@ -6,7 +6,6 @@ body {
 	background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
 }
 .nav {
 	display: flex;
@@ -31,10 +30,17 @@ body {
 	justify-content: flex-end;
 	align-items: center;
 }
-.nav div a {
+nav div a {
 	color: white;
 	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	padding: 0.3em;
+	transition: font-size ease-in-out 0.2s, text-shadow ease-in-out 0.2s;
+}
+nav div a:hover {
+	font-size: 1.1em;
+	text-shadow: 0px 0px 1px white;
 }
 .sidebar {
 	position: relative;
@@ -50,7 +56,7 @@ body {
 	height: 58em;
 }
 .sidebar div {
-	width: 90%;
+	width: 100%;
 }
 .sidebar .sidebar-top {
 	display: flex;
@@ -65,10 +71,7 @@ body {
 	align-items: center;
 }
 .sidebar div a {
-	color: white;
-	text-decoration: none;
-	padding-top: 1em;
-	font-family: 'Roboto', sans-serif;
+	width: 100%;
 }
 .content {
 	position: relative;
