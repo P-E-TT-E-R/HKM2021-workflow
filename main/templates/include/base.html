@@ -33,7 +33,9 @@
 
 		{% include 'include/navbar.html' %}
 
-		{% include 'include/sidebar.html' %}
+		{% if request.user.is_authenticated %}
+			{% include 'include/sidebar.html' %}
+		{% endif %}
 
 		<div class="content">
 			{% block content %}

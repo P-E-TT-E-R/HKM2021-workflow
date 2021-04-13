@@ -9,20 +9,66 @@ body {
 
 }
 .nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	width: 100%;
 	min-height: 2em;
 	background-color:  #1e8c65 ;
 	border-bottom: 1px solid rgba(255,255,255,0.7);
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
+.nav div {
+	width: 47%;
+}
+.nav .nav-left {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.nav .nav-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.nav div a {
+	color: white;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
 .sidebar {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 	width: 10%;
 	float: left;
 	height: 30em;
 	background-color:  #229e72 ;
 	border-right: 1px solid rgba(255,255,255,0.7);
 	height: 58em;
+}
+.sidebar div {
+	width: 90%;
+}
+.sidebar .sidebar-top {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.sidebar .sidebar-bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+.sidebar div a {
+	color: white;
+	text-decoration: none;
+	padding-top: 1em;
+	font-family: 'Roboto', sans-serif;
 }
 .content {
 	position: relative;
