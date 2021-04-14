@@ -11,6 +11,21 @@ def index(request):
 
 def panel(request):
     if request.user.is_authenticated:
-        return render(request, 'main/controlpanel.html')
+        return render(request, 'main/panel.html')
+    else:
+        raise PermissionDenied()
+def schedule(request):
+    if request.user.is_authenticated:
+        return render(request, 'main/schedule.html')
+    else:
+        raise PermissionDenied()
+def rooms(request):
+    if request.user.is_authenticated:
+        return render(request, 'main/rooms.html')
+    else:
+        raise PermissionDenied()
+def events(request):
+    if request.user.is_authenticated:
+        return render(request, 'main/events.html')
     else:
         raise PermissionDenied()

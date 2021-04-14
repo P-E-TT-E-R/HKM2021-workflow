@@ -1,9 +1,9 @@
 <nav class="sidebar">
     <div class="sidebar-top">
-        <a href="">Home</a>
-        <a href="">My Schedule</a>
-		<a href="">Rooms</a>
-        <a href="">Events</a>
+        <a href="{% url 'main:panel' %}">Home</a>
+        <a href="{% url 'main:schedule' %}">My Schedule</a>
+		<a href="{% url 'main:rooms' %}">Rooms</a>
+        <a href="{% url 'main:events' %}">Events</a>
 	</div>
 	<div class="sidebar-bottom">
 
