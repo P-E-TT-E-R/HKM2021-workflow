@@ -19,6 +19,11 @@ def schedule(request):
         return render(request, 'main/schedule.html')
     else:
         raise PermissionDenied()
+def projects(request):
+    if request.user.is_authenticated:
+        return render(request, 'main/projects.html')
+    else:
+        raise PermissionDenied()
 def rooms(request):
     if request.user.is_authenticated:
         return render(request, 'main/rooms.html')
