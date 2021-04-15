@@ -98,6 +98,10 @@ nav div a:hover {
 .sidebar div a {
 	width: 100%;
 }
+.sidebar div .active {
+	border-right: 4px solid white;
+	border-radius: 0px 4px 4px 0px;
+}
 .content {
 	position: relative;
 	width: 90%;
