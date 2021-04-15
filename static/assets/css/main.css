@@ -104,3 +104,17 @@ nav div a:hover {
 	float: right;
 	height: 30em;
 }
+
+table {
+	width: 80%;
+	margin: 25px;
+	color: white;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+.stlpec {
+	height: 350px;
+}
