@@ -3,37 +3,87 @@
 {% block title %}Domov{% endblock %}
 
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css" />
 
-<!-- If you use the default popups, use this. -->
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css" />
 {% endblock stylesheets %}
 
 {% block content %}
-<div id="calendar" style="height: 800px;"></div>
-<script type="text/javascript">
-	var Calendar = tui.Calendar;
-	// jquery wrapper
-	var $calEl = $('#calendar').tuiCalendar({
-		defaultView: 'month',
-		taskView: true,
-		template: {
-			monthDayname: function(dayname) {
-				return '<span class="calendar-week-dayname-name">' + dayname.label + '</span>';
-			}
-		}
-	});
-
-// You can get calendar instance
-var calendarInstance = $calEl.data('tuiCalendar');
-
-calendarInstance.createSchedules(['New']);
-</script>
-<script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
-<script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
-<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
-<script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
+<div class="project">
+	<div class="card">
+		<div class="card-header">
+			<p> <i class="bi bi-chevron-double-down"></i> Waiting</p>
+		</div>
+		<div class="card-content">
+			<table class="table">
+			<tr>
+				<th>Task:</th>
+				<th>Controls:</th>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			<p> <i class="bi bi-chevron-double-down"></i> In Progress</p>
+		</div>
+		<div class="card-content">
+			<table class="table">
+			<tr>
+				<th>Task:</th>
+				<th>Controls:</th>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			<p> <i class="bi bi-chevron-double-down"></i> Done</p>
+		</div>
+		<div class="card-content">
+			<table class="table">
+			<tr>
+				<th>Task:</th>
+				<th>Controls:</th>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+			<tr>
+				<td>Finish cards</td>
+				<td><a href="">Take</a></td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</div>
 {% endblock content %}
 
 {% block javascript %}

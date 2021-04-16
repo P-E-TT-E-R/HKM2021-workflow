@@ -8,6 +8,19 @@ body {
 	/*background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 90%;
+	float: right;
+	min-height: 30em;
+}
+.content {
+	padding-top: 5em;
+	width: 80%;
+}
 nav div a {
 	color: white;
 	text-decoration: none;
@@ -48,16 +61,14 @@ nav div a:hover {
 	padding: 0.3em;
 }
 .sidebar {
-	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	width: 10%;
 	float: left;
-	height: 30em;
 	background-color:  #333 ;
-	height: 58em;
+	height: 57em;
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 }
 .sidebar div {
@@ -102,13 +113,59 @@ nav div a:hover {
 	border-right: 4px solid white;
 	border-radius: 0px 4px 4px 0px;
 }
-.content {
-	position: relative;
-	width: 90%;
-	float: right;
-	height: 30em;
+.project .card {
+	width: 100%;
 }
+.project .card .card-content .table {
+	width: 100%;
+	margin: 0px;
+}
+.project .card .card-content .table tr td:nth-child(2) {
+	width: 20%;
+}
+.card {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: thin;
+	background-color: #333;
+	border-radius: 1em;
+	min-width: 30em;
+	margin-bottom: 3em;
+}
+.card-header {
+	display: block;
+	background-color: #222;
+	max-height: 3em;
+	border-radius: 1em 1em 0em 0em;
+	padding: 0.5em;
+}
+.card-header p {
+	margin: 0px;
+}
+.card-content {
+	padding: 0.5em;
+}
+.table {
+	border: none;
+}
+.table tr th {
+	border: none;
+	text-align: left;
+	background-color:  #181818 ;
+	padding: 0.5em;
+}
+.table tr td {
+	border: none;
+	padding: 0.5em;
+}
+.table tr  {
+	background-color:  #222 ;
+}
+.table tr:nth-child(even) {
+	background-color:  #292929 ;
 
+}
 table {
 	width: 80%;
 	margin: 25px;

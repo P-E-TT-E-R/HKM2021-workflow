@@ -37,9 +37,11 @@
 			{% include 'include/sidebar.html' %}
 		{% endif %}
 
-		<div class="content">
-			{% block content %}
-			{% endblock content %}
+		<div class="content-wrapper">
+			<div class="content">
+				{% block content %}
+				{% endblock content %}ň
+			</div>
 		</div>
 		{% include 'include/footer.html' %}
 
@@ -50,6 +52,7 @@
 
     <!-- Specific Page JS goes HERE  -->
     {% block javascripts %}{% endblock javascripts %}
+    <script src="{% static '/assets/js/main.js' %}"></script>
 
 </body>
 </html>
