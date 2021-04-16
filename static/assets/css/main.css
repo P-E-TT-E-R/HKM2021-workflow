@@ -126,8 +126,8 @@ nav div a:hover {
 	width: 100%;
 	margin: 0px;
 }
-.project .card .card-content .table tr td:nth-child(2) {
-	width: 10%;
+.project .card .card-content .table tr td:nth-child(1) {
+	width: 75%;
 }
 .card {
 	color: white;
@@ -176,6 +176,7 @@ nav div a:hover {
 }
 .table tr td a {
 	color: white;
+	text-decoration: none;
 }
 .table tr  {
 	background-color:  #222 ;
