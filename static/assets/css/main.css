@@ -150,6 +150,8 @@ nav div a:hover {
 }
 .card-header p {
 	margin: 0px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 .card-content {
 	padding-bottom: 0.5em;
@@ -190,16 +192,51 @@ nav div a:hover {
 	color: gray;
 }
 /* Calendar */
-table {
-	width: 80%;
-	margin: 25px;
+.calendar {
+	border: none;
+}
+.calendar tr th {
+	width: 180px;
+	border: none;
+	text-align: center;
+	border-bottom: solid 1px gray;
+	padding: 0.5em;
+}
+
+.calendar tr  {
+	background-color:  #222 ;
+}
+.calendar tr:nth-child(even) {
+	background-color:  #292929 ;
+}
+/* hodiny */
+.casy {
 	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: thin;
+	background-color: #333;
+	border-radius: 1em;
+	min-width: 70px;
+	margin-bottom: 3em;
+}
+.casy-content {
+	padding-bottom: 0.5em;
+}
+.hodiny {
+	border: none;
+}
+.hodiny tr td {
+	width: 70px;
+	border: none;
+	text-align: center;
+	border-bottom: solid 1px gray;
+	padding: 0.5em;
 }
 
-table, th, td {
-  border: 1px solid white;
+.hodiny tr  {
+	background-color:  #222 ;
 }
-
-.stlpec {
-	height: 350px;
+.hodiny tr:nth-child(even) {
+	background-color:  #292929 ;
 }
