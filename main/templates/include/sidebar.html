@@ -1,11 +1,11 @@
 {% with url_name=request.resolver_match.url_name %}
 <nav class="sidebar">
-    <div class="sidebar-top">
-        <a class="{% if url_name == 'panel' %}active{% endif %}" href="{% url 'main:panel' %}">Home</a>
-        <a class="{% if url_name == 'schedule' %}active{% endif %}" href="{% url 'main:schedule' %}">My Schedule</a>
-        <a class="{% if url_name == 'projects' %}active{% endif %}" href="{% url 'main:projects' %}">My Projects</a>
-		<a class="{% if url_name == 'rooms' %}active{% endif %}" href="{% url 'main:rooms' %}">Rooms</a>
-        <a class="{% if url_name == 'events' %}active{% endif %}" href="{% url 'main:events' %}">Events</a>
+    <div class="sidebar-top colored-blue">
+        <a class="colored {% if url_name == 'panel' %}active{% endif %}" href="{% url 'main:panel' %}">Home</a>
+        <a class="colored {% if url_name == 'schedule' %}active{% endif %}" href="{% url 'main:schedule' %}">My Schedule</a>
+        <a class="colored {% if url_name == 'projects' %}active{% endif %}" href="{% url 'main:projects' %}">My Projects</a>
+		<a class="colored {% if url_name == 'rooms' %}active{% endif %}" href="{% url 'main:rooms' %}">Rooms</a>
+        <a class="colored {% if url_name == 'events' %}active{% endif %}" href="{% url 'main:events' %}">Events</a>
 	</div>
 	<div class="sidebar-bottom">
 

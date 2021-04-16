@@ -78,19 +78,19 @@ nav div a:hover {
 	color: white;
 	padding: 0.5em 0em 0.5em 0em;
 }
-.sidebar div a:nth-child(1) {
+.colored-blue .colored:nth-child(1), .colored-blue *:nth-child(1) .colored {
 	background-color: #6930c3;
 }
-.sidebar div a:nth-child(2) {
+.colored-blue .colored:nth-child(2), .colored-blue *:nth-child(2) .colored {
 	background-color: #5e60ce;
 }
-.sidebar div a:nth-child(3) {
+.colored-blue .colored:nth-child(3), .colored-blue *:nth-child(3) .colored {
 	background-color: #5390d9;
 }
-.sidebar div a:nth-child(4) {
+.colored-blue .colored:nth-child(4), .colored-blue *:nth-child(4) .colored {
 	background-color: #4ea8de;
 }
-.sidebar div a:nth-child(5) {
+.colored-blue .colored:nth-child(5), .colored-blue *:nth-child(5) .colored {
 	background-color: #48bfe3;
 }
 
@@ -144,7 +144,16 @@ nav div a:hover {
 	margin: 0px;
 }
 .card-content {
-	padding: 0.5em;
+	padding-bottom: 0.5em;
+}
+.card-alert .card-header{
+	border-color:  #c62727;
+}
+.card-warning .card-header{
+	border-color:  #ed9717;
+}
+.card-success .card-header{
+	border-color:  #5fbf33;
 }
 .table {
 	border: none;
@@ -152,12 +161,15 @@ nav div a:hover {
 .table tr th {
 	border: none;
 	text-align: left;
-	background-color:  #181818 ;
+	border-bottom: solid 1px gray;
 	padding: 0.5em;
 }
 .table tr td {
 	border: none;
 	padding: 0.5em;
+}
+.table tr td a {
+	color: white;
 }
 .table tr  {
 	background-color:  #222 ;
@@ -165,6 +177,9 @@ nav div a:hover {
 .table tr:nth-child(even) {
 	background-color:  #292929 ;
 
+}
+.switcher {
+	
 }
 table {
 	width: 80%;
