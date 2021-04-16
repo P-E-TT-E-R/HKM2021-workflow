@@ -1,12 +1,9 @@
+/* Basics */
 body {
 	margin: 0px;
 	padding: 0px;
 	min-height: 40em;
 	background-color:  #181818 ;
-	/*background: #11998e;  /* fallback for old browsers */
-	/*background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-	/*background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 .content-wrapper {
 	display: flex;
@@ -21,6 +18,23 @@ body {
 	padding-top: 5em;
 	width: 80%;
 }
+/* Colors */
+.colored-blue .colored:nth-child(1), .colored-blue *:nth-child(1) .colored {
+	background-color: #6930c3;
+}
+.colored-blue .colored:nth-child(2), .colored-blue *:nth-child(2) .colored {
+	background-color: #5e60ce;
+}
+.colored-blue .colored:nth-child(3), .colored-blue *:nth-child(3) .colored {
+	background-color: #5390d9;
+}
+.colored-blue .colored:nth-child(4), .colored-blue *:nth-child(4) .colored {
+	background-color: #4ea8de;
+}
+.colored-blue .colored:nth-child(5), .colored-blue *:nth-child(5) .colored {
+	background-color: #48bfe3;
+}
+/* Nav and sidebar buttons */
 nav div a {
 	color: white;
 	text-decoration: none;
@@ -34,6 +48,7 @@ nav div a:hover {
 	font-size: 1.5em;
 	text-shadow: 0px 0px 1px white;
 }
+/* Nav */
 .nav {
 	display: flex;
 	justify-content: space-around;
@@ -60,6 +75,7 @@ nav div a:hover {
 .nav div a{
 	padding: 0.3em;
 }
+/* Sidebar */
 .sidebar {
 	display: flex;
 	flex-direction: column;
@@ -78,22 +94,6 @@ nav div a:hover {
 	color: white;
 	padding: 0.5em 0em 0.5em 0em;
 }
-.colored-blue .colored:nth-child(1), .colored-blue *:nth-child(1) .colored {
-	background-color: #6930c3;
-}
-.colored-blue .colored:nth-child(2), .colored-blue *:nth-child(2) .colored {
-	background-color: #5e60ce;
-}
-.colored-blue .colored:nth-child(3), .colored-blue *:nth-child(3) .colored {
-	background-color: #5390d9;
-}
-.colored-blue .colored:nth-child(4), .colored-blue *:nth-child(4) .colored {
-	background-color: #4ea8de;
-}
-.colored-blue .colored:nth-child(5), .colored-blue *:nth-child(5) .colored {
-	background-color: #48bfe3;
-}
-
 .sidebar .sidebar-top {
 	display: flex;
 	flex-direction: column;
@@ -113,6 +113,7 @@ nav div a:hover {
 	border-right: 4px solid white;
 	border-radius: 0px 4px 4px 0px;
 }
+/* Projects */
 .project {
 	display: flex;
 	flex-direction: column;
@@ -129,6 +130,7 @@ nav div a:hover {
 .project .card .card-content .table tr td:nth-child(1) {
 	width: 75%;
 }
+/* Cards */
 .card {
 	color: white;
 	font-family: 'Roboto', sans-serif;
@@ -152,15 +154,7 @@ nav div a:hover {
 .card-content {
 	padding-bottom: 0.5em;
 }
-.card-alert .card-header{
-	border-color:  #c62727;
-}
-.card-warning .card-header{
-	border-color:  #ed9717;
-}
-.card-success .card-header{
-	border-color:  #5fbf33;
-}
+/* Table */
 .table {
 	border: none;
 }
@@ -185,6 +179,7 @@ nav div a:hover {
 	background-color:  #292929 ;
 
 }
+/* Switcher */
 .switcher p, .switcher p a {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
@@ -194,6 +189,7 @@ nav div a:hover {
 .switcher p a:hover {
 	color: gray;
 }
+/* Calendar */
 table {
 	width: 80%;
 	margin: 25px;
