@@ -19,12 +19,33 @@
 		
 	</div>
 </div>
-<div class="project colored-blue">
-	<div class="casy">
-		<div class="casy-content">
-			<table class="hodiny">
+
+<div class="schedule colored-blue">
+	<div class="card">
+		<div class="card-header colored">
+			<p>December 2021</p>
+		</div>
+		<div class="card-content">
+			<table class="calendar">
+				<tr>
+					<th></th>
+					<th>Sun</th>
+					<th>Mon</th>
+					<th>Thue</th>
+					<th>Wed</th>
+					<th>Thu</th>
+					<th>Fri</th>
+					<th>Sat</th>
+				</tr>
 				<tr>
 					<td>0:00</td>
+					<td rowspan=12></td>
+					<td rowspan=12></td>
+					<td rowspan=12></td>
+					<td rowspan=12></td>
+					<td rowspan=12></td>
+					<td rowspan=12></td>
+					<td rowspan=12></td>
 				</tr>
 				<tr>
 					<td>2:00</td>
@@ -47,39 +68,23 @@
 				<tr>
 					<td>14:00</td>
 				</tr>
+				<tr>
+					<td>16:00</td>
+				</tr>
+				<tr>
+					<td>18:00</td>
+				</tr>
+				<tr>
+					<td>20:00</td>
+				</tr>
+				<tr>
+					<td>22:00</td>
+				</tr>
+
 			</table>
 		</div>
 	</div>
+	{% endblock content %}
 
-	<div class="project colored-blue">
-		<div class="card">
-			<div class="card-header colored">
-				<p>December 2021</p>
-			</div>
-			<div class="card-content">
-				<table class="calendar">
-					<tr>
-						<th>Sun</th>
-						<th>Mon</th>
-						<th>Thue</th>
-						<th>Wed</th>
-						<th>Thu</th>
-						<th>Fri</th>
-						<th>Sat</th>
-					</tr>
-					<tr style="height: 550px;">
-						<th></th>
-						<th></th>
-						<th></th>
-						<th></th>
-						<th></th>
-						<th></th>
-						<th></th>
-					</tr>
-				</table>
-			</div>
-		</div>
-		{% endblock content %}
-
-		{% block javascript %}
-		{% endblock javascript %}
+{% block javascript %}
+{% endblock javascript %}

@@ -194,49 +194,19 @@ nav div a:hover {
 /* Calendar */
 .calendar {
 	border: none;
+	width: 100%;
+	height: 30em;
 }
-.calendar tr th {
-	width: 180px;
-	border: none;
-	text-align: center;
-	border-bottom: solid 1px gray;
-	padding: 0.5em;
-}
-
 .calendar tr  {
 	background-color:  #222 ;
 }
 .calendar tr:nth-child(even) {
 	background-color:  #292929 ;
 }
-/* hodiny */
-.casy {
-	color: white;
-	font-family: 'Roboto', sans-serif;
-	font-size: 1em;
-	font-weight: thin;
-	background-color: #333;
-	border-radius: 1em;
-	min-width: 70px;
-	margin-bottom: 3em;
-}
-.casy-content {
-	padding-bottom: 0.5em;
-}
-.hodiny {
+.calendar tr td, .calendar tr th {
 	border: none;
-}
-.hodiny tr td {
-	width: 70px;
-	border: none;
+	width: 12.5%;
 	text-align: center;
 	border-bottom: solid 1px gray;
-	padding: 0.5em;
-}
-
-.hodiny tr  {
-	background-color:  #222 ;
-}
-.hodiny tr:nth-child(even) {
-	background-color:  #292929 ;
+	padding: 0.1em;
 }
