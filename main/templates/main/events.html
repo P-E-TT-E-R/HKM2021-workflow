@@ -3,37 +3,35 @@
 {% block title %}Domov{% endblock %}
 
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css" />
-
-<!-- If you use the default popups, use this. -->
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css" />
 {% endblock stylesheets %}
 
 {% block content %}
-<div id="calendar" style="height: 800px;"></div>
-<script type="text/javascript">
-	var Calendar = tui.Calendar;
-	// jquery wrapper
-	var $calEl = $('#calendar').tuiCalendar({
-		defaultView: 'month',
-		taskView: true,
-		template: {
-			monthDayname: function(dayname) {
-				return '<span class="calendar-week-dayname-name">' + dayname.label + '</span>';
-			}
-		}
-	});
+<div class="events colored-blue">
+	<div class="card">
+		<div class="card-header colored">
+			<p> <i class="bi bi-chevron-double-down"></i> Upcoming company events</p>
+		</div>
+		<div class="card-content">
+			<table class="table">
+			<tr>
+				<th>Title:</th>
+				<th>Description:</th>
+				<th>Date:</th>
+				<th>Participating:</th>
+				<th>Controls:</th>
+			</tr>
+			<tr>
+				<td>Event Title</td>
+				<td>Event Desc</td>
+				<td>12.2.2004</td>
+				<td>18 people</td>
+				<td><a href=""><i class="bi bi-plus-circle"></i> Visit</a></td>
+			</tr>
 
-// You can get calendar instance
-var calendarInstance = $calEl.data('tuiCalendar');
-
-calendarInstance.createSchedules(['New']);
-</script>
-<script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
-<script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
-<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
-<script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
+		</table>
+		</div>
+	</div>
+</div>
 {% endblock content %}
 
 {% block javascript %}

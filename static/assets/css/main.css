@@ -19,19 +19,19 @@ body {
 	width: 80%;
 }
 /* Colors */
-.colored-blue .colored:nth-child(1), .colored-blue *:nth-child(1) .colored {
+.colored-blue .colored:nth-child(1n), .colored-blue *:nth-child(1n) .colored {
 	background-color: #6930c3;
 }
-.colored-blue .colored:nth-child(2), .colored-blue *:nth-child(2) .colored {
+.colored-blue .colored:nth-child(2n), .colored-blue *:nth-child(2n) .colored {
 	background-color: #5e60ce;
 }
-.colored-blue .colored:nth-child(3), .colored-blue *:nth-child(3) .colored {
+.colored-blue .colored:nth-child(3n), .colored-blue *:nth-child(3n) .colored {
 	background-color: #5390d9;
 }
-.colored-blue .colored:nth-child(4), .colored-blue *:nth-child(4) .colored {
+.colored-blue .colored:nth-child(4n), .colored-blue *:nth-child(4n) .colored {
 	background-color: #4ea8de;
 }
-.colored-blue .colored:nth-child(5), .colored-blue *:nth-child(5) .colored {
+.colored-blue .colored:nth-child(5n), .colored-blue *:nth-child(5n) .colored {
 	background-color: #48bfe3;
 }
 /* Nav and sidebar buttons */
@@ -112,6 +112,26 @@ nav div a:hover {
 .sidebar div .active {
 	border-right: 4px solid white;
 	border-radius: 0px 4px 4px 0px;
+}
+/* Events */
+.events {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+.events .card {
+	width: 100%;
+}
+.events .card .card-content .table {
+	width: 100%;
+	margin: 0px;
+}
+.events .card .card-content .table tr th:first-child {
+	width: 15%;
+}
+.events .card .card-content .table tr th:nth-child(2) {
+	width: 60%;
 }
 /* Projects */
 .project {
@@ -209,4 +229,10 @@ nav div a:hover {
 	text-align: center;
 	border-bottom: solid 1px gray;
 	padding: 0.1em;
+}
+.calendar .field {
+	vertical-align: top;
+}
+.calendar .field p {
+	margin: 0px;
 }
