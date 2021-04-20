@@ -236,3 +236,27 @@ nav div a:hover {
 .calendar .field p {
 	margin: 0px;
 }
+.panel {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	min-height: 30em;
+}
+.panel div:nth-child(1) {
+	width: 75%;
+	height: 30em;
+	background-color: #333;
+}
+.panel div:nth-child(2) {
+	width: 25%;
+	height: 30em;
+	background-color: #333;
+}
+footer {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0;
+	box-sizing: border-box;
+	background-color: #333;
+}

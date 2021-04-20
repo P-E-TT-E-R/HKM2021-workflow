@@ -3,38 +3,102 @@
 {% block title %}Domov{% endblock %}
 
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css" />
 
-<!-- If you use the default popups, use this. -->
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
-<link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css" />
 {% endblock stylesheets %}
 
 {% block content %}
-<div id="calendar" style="height: 800px;"></div>
-<script type="text/javascript">
-	var Calendar = tui.Calendar;
-	// jquery wrapper
-	var $calEl = $('#calendar').tuiCalendar({
-		defaultView: 'month',
-		taskView: true,
-		template: {
-			monthDayname: function(dayname) {
-				return '<span class="calendar-week-dayname-name">' + dayname.label + '</span>';
-			}
-		}
-	});
+<div class="panel-primary">
+	<div class="schedule">
+		
+	</div>
+	<div>
+		
+	</div>
+</div>
+<div class="panel-secondary">
+	<div class="notifications">
+		
+	</div>
+</div>
 
-// You can get calendar instance
-var calendarInstance = $calEl.data('tuiCalendar');
+<div class="schedule colored-blue">
+	<div class="card">
+		<div class="card-header colored">
+			<p>December 2021</p>
+		</div>
+		<div class="card-content">
+			<table class="calendar">
+				<tr>
+					<th></th>
+					<th>Sun</th>
+					<th>Mon</th>
+					<th>Thue</th>
+					<th>Wed</th>
+					<th>Thu</th>
+					<th>Fri</th>
+					<th>Sat</th>
+				</tr>
+				<tr>
+					<td>0:00</td>
+					<td class="field colored-blue" rowspan=12>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>	
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+					</td>
+					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
+					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
+					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
+					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
+					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
+					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
+				</tr>
+				<tr>
+					<td>2:00</td>
+				</tr>
+				<tr>
+					<td>4:00</td>
+				</tr>
+				<tr>
+					<td>6:00</td>
+				</tr>
+				<tr>
+					<td>8:00</td>
+				</tr>
+				<tr>
+					<td>10:00</td>
+				</tr>
+				<tr>
+					<td>12:00</td>
+				</tr>
+				<tr>
+					<td>14:00</td>
+				</tr>
+				<tr>
+					<td>16:00</td>
+				</tr>
+				<tr>
+					<td>18:00</td>
+				</tr>
+				<tr>
+					<td>20:00</td>
+				</tr>
+				<tr>
+					<td>22:00</td>
+				</tr>
 
-calendarInstance.createSchedules(['New']);
-</script>
-<script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
-<script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
-<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
-<script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
-{% endblock content %}
+			</table>
+		</div>
+	</div>
+	{% endblock content %}
 
-{% block javascript %}
-{% endblock javascript %}
+	{% block javascript %}
+	{% endblock javascript %}
