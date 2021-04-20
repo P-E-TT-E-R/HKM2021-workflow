@@ -20,14 +20,15 @@
 				<th>Participating:</th>
 				<th>Controls:</th>
 			</tr>
-			<tr>
-				<td>Event Title</td>
-				<td>Event Desc</td>
-				<td>12.2.2004</td>
-				<td>18 people</td>
-				<td><a href=""><i class="bi bi-plus-circle"></i> Visit</a></td>
-			</tr>
-
+			{% for row in rows %}
+				<tr>
+					<td>{{ row.name }}</td>
+					<td>{{ row.description }}</td>
+					<td>{{ row.date }}</td>
+					<td>18 people</td>
+					<td><a href=""><i class="bi bi-plus-circle"></i> Visit</a></td>
+				</tr>
+			{% endfor %}
 		</table>
 		</div>
 	</div>

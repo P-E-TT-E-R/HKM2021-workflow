@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponseForbidden
 from django.core.exceptions import PermissionDenied
+from .models import Room, Event, Project
 # Create your views here.
 
 def index(request):
@@ -31,6 +32,7 @@ def rooms(request):
         raise PermissionDenied()
 def events(request):
     if request.user.is_authenticated:
-        return render(request, 'main/events.html')
+        rows = Event.objects.all().order_by("-date")
+        return render(request, 'main/events.html', {"rows":rows})
     else:
         raise PermissionDenied()
