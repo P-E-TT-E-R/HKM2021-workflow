@@ -19,30 +19,26 @@
 			<table class="table">
 			<tr>
 				<th>Task:</th>
+				<th>Date:</th>
 				<th>Priority:</th>
 				<th>Controls:</th>
 			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>small</td>
-				<td><a href=""><i class="bi bi-plus-circle"></i> TAKE</a></td>
-			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>urgent</td>
-				<td><a href=""><i class="bi bi-plus-circle"></i> TAKE</a></td>
-			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>normal</td>
-				<td><a href=""><i class="bi bi-plus-circle"></i> TAKE</a></td>
-			</tr>
+			{{ waiting }}
+			{% for task in waiting %}
+			{{ task }}
+				<tr>
+					<td>{{ task.name }}</td>
+					<td>{{ task.date }}</td>
+					<td>{{ task.priority }}</td>
+					<td><a href=""><i class="bi bi-check-circle"></i> TAKE</a></td>
+				</tr>
+			{% endfor %}
 		</table>
 		</div>
 	</div>
 	<div class="card">
 		<div class="card-header colored">
-			<p> <i class="bi bi-chevron-double-down"></i> Waiting</p>
+			<p> <i class="bi bi-chevron-double-down"></i> In progress</p>
 		</div>
 		<div class="card-content">
 			<table class="table">
@@ -52,30 +48,22 @@
 				<th>Priority:</th>
 				<th>Controls:</th>
 			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>P_E_TT_E_R</td>
-				<td>small</td>
-				<td><a href=""><i class="bi bi-check-circle"></i> FINISH</a></td>
-			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>P_E_TT_E_R</td>
-				<td>urgent</td>
-				<td><a href=""><i class="bi bi-check-circle"></i> FINISH</a></td>
-			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>P_E_TT_E_R</td>
-				<td>normal</td>
-				<td><a href=""><i class="bi bi-check-circle"></i> FINISH</a></td>
-			</tr>
+			{% for task in in_progress %}
+				<tr>
+					<td>task.name</td>
+					<td>task.user</td>
+					<td>task.priority</td>
+					{% if request.user.username == task.user %}
+						<td><a href=""><i class="bi bi-check-circle"></i> FINISH</a></td>
+					{% endif %}
+				</tr>
+			{% endfor %}
 		</table>
 		</div>
 	</div>
 	<div class="card">
 		<div class="card-header colored">
-			<p> <i class="bi bi-chevron-double-down"></i> Waiting</p>
+			<p> <i class="bi bi-chevron-double-down"></i> Finished</p>
 		</div>
 		<div class="card-content">
 			<table class="table">
@@ -85,24 +73,16 @@
 				<th>Priority:</th>
 				<th>Controls:</th>
 			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>P_E_TT_E_R</td>
-				<td>small</td>
-				<td><a href=""><i class="bi bi-file-earmark-x"></i> CLEAR</a></td>
-			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>P_E_TT_E_R</td>
-				<td>urgent</td>
-				<td><a href=""><i class="bi bi-file-earmark-x"></i> CLEAR</a></td>
-			</tr>
-			<tr>
-				<td>Finish cards</td>
-				<td>P_E_TT_E_R</td>
-				<td>normal</td>
-				<td><a href=""><i class="bi bi-file-earmark-x"></i> CLEAR</a></td>
-			</tr>
+			{% for task in finished %}
+				<tr>
+					<td>task.name</td>
+					<td>task.user</td>
+					<td>task.priority</td>
+					{% if request.user.username == task.user %}
+						<td><a href=""><i class="bi bi-file-earmark-x"></i> CLEAR</a></td>
+					{% endif %}
+				</tr>
+			{% endfor %}
 		</table>
 		</div>
 	</div>
