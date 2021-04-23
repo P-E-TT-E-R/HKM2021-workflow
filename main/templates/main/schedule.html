@@ -1,6 +1,6 @@
 {% extends "include/base.html" %}
 
-{% block title %}Domov{% endblock %}
+{% block title %}Schedule{% endblock %}
 
 {% block stylesheets %}
 
@@ -32,7 +32,7 @@
 					<th></th>
 					<th>Sun</th>
 					<th>Mon</th>
-					<th>Thue</th>
+					<th>Tue</th>
 					<th>Wed</th>
 					<th>Thu</th>
 					<th>Fri</th>
@@ -41,25 +41,37 @@
 				<tr>
 					<td>0:00</td>
 					<td class="field colored-blue" rowspan=12>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>	
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
-						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
+						{% for event in sun %}
+							<p class="{{event.class}}" style="{{event.height}}">{{event.name}}</p>
+						{% endfor%}
 						<p class="colored" style="height: 3em;">Pohovor, Teambuilding 20:00 - 6:00</p>
 					</td>
-					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
-					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
-					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
-					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
-					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
-					<td class="field colored-blue" rowspan=12><p style="height: 1em;"></p></td>
+					<td class="field colored-blue" rowspan=12>
+						{% for event in mon %}
+							<p class="{{event.class}}" style="{{event.height}}">{{event.name}}</p>
+						{% endfor%}
+					</td>
+					<td class="field colored-blue" rowspan=12>
+						{% for event in tue %}
+							<p class="{{event.class}}" style="{{event.height}}">{{event.name}}</p>
+						{% endfor%}
+					</td><td class="field colored-blue" rowspan=12>
+						{% for event in wed %}
+							<p class="{{event.class}}" style="{{event.height}}">{{event.name}}</p>
+						{% endfor%}
+					</td><td class="field colored-blue" rowspan=12>
+						{% for event in thu %}
+							<p class="{{event.class}}" style="{{event.height}}">{{event.name}}</p>
+						{% endfor%}
+					</td><td class="field colored-blue" rowspan=12>
+						{% for event in fri %}
+							<p class="{{event.class}}" style="{{event.height}}">{{event.name}}</p>
+						{% endfor%}
+					</td><td class="field colored-blue" rowspan=12>
+						{% for event in sat %}
+							<p class="{{event.class}}" style="{{event.height}}">{{event.name}}</p>
+						{% endfor%}
+					</td>
 				</tr>
 				<tr>
 					<td>2:00</td>

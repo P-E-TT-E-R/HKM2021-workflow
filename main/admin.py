@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Room, Event, Project
+from .models import Room, Event, Project, Schedule
 # Register your models here.
 
 @admin.register(Room)
@@ -16,3 +16,8 @@ Event._meta.get_fields()]
 class ProjectControl(admin.ModelAdmin):
   list_display = [field.name for field in
 Project._meta.get_fields()]
+
+@admin.register(Schedule)
+class ScheduleControl(admin.ModelAdmin):
+  list_display = [field.name for field in
+Schedule._meta.get_fields()]

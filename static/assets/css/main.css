@@ -229,6 +229,7 @@ nav div a:hover {
 	text-align: center;
 	border-bottom: solid 1px gray;
 	padding: 0.1em;
+	height: 3em;
 }
 .calendar .field {
 	vertical-align: top;
